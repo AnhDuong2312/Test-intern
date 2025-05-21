@@ -16,6 +16,7 @@ function TodoItem({ todo, index }: TodoItemProps) {
   const [editing, setEditing] = useState(false)
   const [editText, setEditText] = useState(todo.text)
   const [successMessage, setSuccessMessage] = useState('')
+  const [editDeadline, setEditDeadline] = useState(todo.deadline || '');
 
   const showToast = (message: string) => {
     setSuccessMessage(message)
@@ -23,11 +24,11 @@ function TodoItem({ todo, index }: TodoItemProps) {
   }
 
   const handleUpdate = () => {
-    if (!editText.trim()) return
-    dispatch(updateTodo({ id: todo.id, text: editText.trim() }))
-    setEditing(false)
-    showToast('Đã cập nhật công việc!')
-  }
+  if (!editText.trim()) return;
+  dispatch(updateTodo({ id: todo.id, text: editText.trim(), deadline: editDeadline }));
+  setEditing(false);
+  showToast('Đã cập nhật công việc!');
+};
 
   const handleDelete = () => {
     showToast('Đang xoá công việc!')
@@ -62,7 +63,19 @@ function TodoItem({ todo, index }: TodoItemProps) {
 
         <td>{todo.createdAt ? new Date(todo.createdAt).toLocaleDateString() : '---'}</td>
 
-        <td>{todo.deadline ? new Date(todo.deadline).toLocaleDateString() : 'Không có'}</td>
+        <td>
+          {editing ? (
+            <input
+              type="date"
+              value={editDeadline}
+              onChange={(e) => setEditDeadline(e.target.value)}
+              className="todo-edit-deadline"
+            />
+          ) : (
+            todo.deadline ? new Date(todo.deadline).toLocaleDateString() : 'Không có'
+          )}
+        </td>
+
 
         <td>
           <input

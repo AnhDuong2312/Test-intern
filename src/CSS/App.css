@@ -1,3 +1,5 @@
+/* App.css - chung cho Light và Dark */
+
 body, html, #root {
   height: 100%;
   margin: 0;
@@ -6,58 +8,30 @@ body, html, #root {
   background: linear-gradient(to right, #f8fafc, #e2e8f0);
 }
 
+/* Container chính */
 .app-container {
   height: 100%;
   display: flex;
   flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* Header */
 .app-header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   padding: 12px 24px;
-  background-color: #cdebdf;
   border-bottom: 1px solid #e2e8f0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.user-info {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.avatar {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-
-.username {
-  font-weight: 500;
-  color: #1e293b;
-}
-
-.app-layout {
-  flex: 1;
-  display: flex;
-  height: 100%;
-}
-
+/* Sidebar */
 .sidebar {
   width: 220px;
-  background-color: #f5f8f5;
   padding: 16px;
   border-right: 1px solid #e2e8f0;
-}
-
-.sidebar-title {
-  font-weight: bold;
-  margin-bottom: 12px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sidebar ul {
@@ -74,22 +48,155 @@ body, html, #root {
   margin-bottom: 6px;
   border-radius: 4px;
   cursor: pointer;
-  color: #334155;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .sidebar li:hover {
   background-color: #e2e8f0;
 }
 
+/* Nội dung chính */
 .main-content {
   flex: 1;
   padding: 24px;
   overflow-y: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.todoAdd-container{
+/* Todo add container */
+.todoAdd-container {
   padding: 20px;
-  background-color: #f8fafc;
   border-radius: 12px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Button toggle theme */
+.btn-toggle-theme {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Light mode styles */
+.app-container.light {
+  background-color: #f9fafb;
+  color: #222222;
+}
+
+.app-container.light .app-header {
+  background-color: #cdebdf;
+  color: #222222;
+}
+
+.app-container.light .sidebar {
+  background-color: #f5f8f5;
+  color: #334155;
+  border-color: #e2e8f0;
+}
+
+.app-container.light .sidebar li {
+  color: #334155;
+}
+
+.app-container.light .sidebar li:hover {
+  background-color: #e2e8f0;
+  color: #1e293b;
+}
+
+.app-container.light .main-content {
+  background-color: #ffffff;
+  color: #222222;
+}
+
+.app-container.light .todoAdd-container {
+  background-color: #f8fafc;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
+  color: #222222;
+}
+
+.app-container.light .btn-toggle-theme {
+  color: #334155;
+}
+
+.app-container.light .btn-toggle-theme:hover {
+  color: #1e293b;
+}
+
+/* Dark mode styles */
+.app-container.dark {
+  background-color: #121212;
+  color: #eee;
+}
+
+.app-container.dark .app-header {
+  background-color: #1e1e1e;
+  color: #eee;
+  border-color: #333333;
+}
+
+.app-container.dark .sidebar {
+  background-color: #1f1f1f;
+  color: #ccc;
+  border-color: #333333;
+}
+
+.app-container.dark .sidebar li {
+  color: #bbb;
+}
+
+.app-container.dark .sidebar li:hover {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+.app-container.dark .main-content {
+  background-color: #181818;
+  color: #eee;
+}
+
+.app-container.dark .todoAdd-container {
+  background-color: #222222;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  color: #eee;
+}
+
+.app-container.dark .btn-toggle-theme {
+  color: #eee;
+}
+
+.app-container.dark .btn-toggle-theme:hover {
+  color: #fff;
+}
+
+
+.app-layout {
+  display: flex;
+  height: calc(100vh - 56px); /* trừ chiều cao header nếu header cao 56px, bạn chỉnh lại cho phù hợp */
+  overflow: hidden;
+}
+
+
+.app-layout {
+  display: flex;
+  height: calc(100vh - 56px); /* chỉnh theo chiều cao header thực tế */
+  overflow: hidden;
+}
+
+.sidebar {
+  width: 220px;
+  padding: 16px;
+  border-right: 1px solid #e2e8f0;
+  flex-shrink: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.main-content {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

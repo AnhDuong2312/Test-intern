@@ -1,0 +1,57 @@
+.app-container.light {
+  background-color: #1565c0;
+  color: #222;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-container.light .app-header {
+  background-color: #9ac2f1;
+  color: #222;
+  border-bottom: 1px solid #ccc;
+}
+
+.app-container.light .sidebar {
+  background-color: rgb(184, 197, 245);
+  color: #333;
+  border-right: 1px solid #ddd;
+}
+
+.app-container.light .sidebar ul li {
+  cursor: pointer;
+  padding: 10px 8px;
+  color: #444;
+  transition: background-color 0.3s ease;
+}
+
+.app-container.light .sidebar ul li:hover {
+  background-color: #e0e0e0;
+  color: #000;
+}
+
+.app-container.light .main-content {
+  background-color: #eeeaea;
+  color: #222;
+  padding: 1rem;
+}
+
+.app-container.light .btn-toggle-theme {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.app-container.light .btn-toggle-theme:hover {
+  color: #000;
+}
+
+.app-container.light .user-info {
+  color: #222;
+}
+
+.app-container.light img.avatar {
+  border: 2px solid #ddd;
+}

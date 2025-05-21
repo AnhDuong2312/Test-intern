@@ -48,12 +48,16 @@ const todoSlice = createSlice({
       saveToLocalStorage([...state])
     },
 
-    updateTodo: (state, action: PayloadAction<{ id: number; text: string }>) => {
-      const { id, text } = action.payload;
+    updateTodo: (state, action: PayloadAction<{ id: number; text: string; deadline?: string }>) => {
+      const { id, text, deadline } = action.payload;
       const todo = state.find((todo) => todo.id === id);
-      if (todo) todo.text = text;
+      if (todo) {
+        todo.text = text;
+        todo.deadline = deadline;
+      }
       saveToLocalStorage(state);
     },
+
     reorderTodos: (_state, action: PayloadAction<Todo[]>) => {
       saveToLocalStorage(action.payload);
       return action.payload;

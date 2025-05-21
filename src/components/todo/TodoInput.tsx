@@ -28,6 +28,11 @@ function TodoInput() {
         onChange={(e) => setInput(e.target.value)}
         placeholder="Thêm công việc..."
         className="todo-input"
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleAdd();
+          }
+        }}
       />
 
       <input
@@ -35,10 +40,15 @@ function TodoInput() {
         value={deadline}
         onChange={(e) => setDeadline(e.target.value)}
         className="todo-deadline-input"
+        onKeyDown={(e) => {
+          if (e.key === 'Enter') {
+            handleAdd();
+          }
+        }}
       />
 
 
-      <button onClick={handleAdd} className="todo-button">
+      <button onClick={handleAdd} type='submit' className="todo-button">
         Thêm
       </button>
 

@@ -83,3 +83,48 @@
     padding: 6px 12px;
   }
 }
+
+.app-container.dark .simple-list-container {
+  background-color: #1e293b; /* slate-800 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.app-container.dark .simple-list-container button {
+  background-color: #334155; /* slate-700 */
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+.app-container.dark .simple-list-container button:hover {
+  background-color: #475569;
+}
+
+.app-container.dark .simple-list-container button.active-filter {
+  background-color: #3b82f6; /* blue-500 */
+  color: white;
+  border-color: #3b82f6;
+}
+
+.app-container.dark .simple-table {
+  background-color: #1e293b;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.app-container.dark .simple-table th {
+  background-color: #334155;
+  color: #f8fafc;
+}
+
+.app-container.dark .simple-table td {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+.app-container.dark .simple-table tbody tr:nth-child(even) td {
+  background-color: #2e3a4d;
+}
+
+.app-container.dark .todo-text.completed {
+  color: #94a3b8;
+}
+

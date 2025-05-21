@@ -28,7 +28,7 @@ function TodoList() {
             <th>#</th>
             <th>Công việc</th>
             <th>Ngày tạo</th>
-            <th>Hạn</th>
+            <th>Hạn kết thúc</th>
             <th>Hoàn thành</th>
             <th>Thao tác</th>
           </tr>

@@ -4,7 +4,8 @@
   margin-bottom: 16px;
 }
 
-.todo-input {
+.todo-input,
+.todo-deadline-input {
   flex: 1;
   border: 1px solid #ccc;
   padding: 8px;
@@ -13,7 +14,8 @@
   transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
-.todo-input:focus {
+.todo-input:focus,
+.todo-deadline-input:focus {
   border-color: #3b82f6;
   box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3);
   outline: none;

@@ -1,0 +1,59 @@
+/* dark.css */
+
+.app-container.dark {
+  background-color: #121212;
+  color: #eee;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.app-container.dark .app-header {
+  background-color: #2c3e50;
+  color: #eee;
+  border-bottom: 1px solid #374350;
+}
+
+.app-container.dark .sidebar {
+  background-color: #374350;
+  color: #ccc;
+  border-right: 1px solid #374350;
+}
+
+.app-container.dark .sidebar ul li {
+  cursor: pointer;
+  padding: 10px 8px;
+  color: #bbb;
+  transition: background-color 0.3s ease;
+}
+
+.app-container.dark .sidebar ul li:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.app-container.dark .main-content {
+  background-color: #494f55;
+  color: #eee;
+  padding: 1rem;
+}
+
+.app-container.dark .btn-toggle-theme {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #eee;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.app-container.dark .btn-toggle-theme:hover {
+  color: #fff;
+}
+
+.app-container.dark .user-info {
+  color: #eee;
+}
+
+.app-container.dark img.avatar {
+  border: 2px solid #444;
+}

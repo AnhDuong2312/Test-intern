@@ -5,7 +5,6 @@
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.04);
 }
 
-/* Bộ lọc */
 .todo-list-container button {
   padding: 8px 16px;
   font-size: 14px;
@@ -27,7 +26,6 @@
   font-weight: 500;
 }
 
-/* Bảng */
 .todo-table {
   width: 100%;
   border-collapse: collapse;
@@ -59,19 +57,16 @@
   color: #111827;
 }
 
-/* Hàng chẵn khác màu */
 .todo-table tbody tr:nth-child(even) td {
   background-color: #f1f5f9;
 }
 
-/* Công việc hoàn thành */
 .todo-text.completed {
   text-decoration: line-through;
   color: #9ca3af;
   font-style: italic;
 }
 
-/* Responsive tối thiểu */
 @media (max-width: 768px) {
   .todo-list-container {
     padding: 12px;
@@ -87,4 +82,48 @@
     font-size: 12px;
     padding: 6px 12px;
   }
+}
+
+.app-container.dark .todo-list-container {
+  background-color: #1e293b; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.app-container.dark .todo-list-container button {
+  background-color: #334155;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+.app-container.dark .todo-list-container button:hover {
+  background-color: #475569;
+}
+
+.app-container.dark .todo-list-container button.active-filter {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.app-container.dark .todo-table {
+  background-color: #1e293b;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+}
+
+.app-container.dark .todo-table th {
+  background-color: #334155;
+  color: #f8fafc;
+}
+
+.app-container.dark .todo-table td {
+  background-color: #1e293b;
+  color: #f1f5f9;
+}
+
+.app-container.dark .todo-table tbody tr:nth-child(even) td {
+  background-color: #2e3a4d;
+}
+
+.app-container.dark .todo-text.completed {
+  color: #94a3b8;
 }
