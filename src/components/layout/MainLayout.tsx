@@ -8,7 +8,6 @@ export default function MainLayout() {
 
   return (
     <div className="min-h-screen flex">
-      {/* Sidebar */}
       <aside className="w-64 bg-gray-800 text-white p-4 space-y-4">
         <h2 className="text-xl font-bold mb-4">Menu</h2>
         <button
@@ -29,7 +28,6 @@ export default function MainLayout() {
         </button>
       </aside>
 
-      {/* Main Content */}
       <main className="flex-1 p-6 bg-gray-100">
         {view === 'dashboard' && <Dashboard />}
         {view === 'todo' && (
