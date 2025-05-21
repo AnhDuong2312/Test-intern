@@ -25,7 +25,8 @@
   - Vite cho khởi động và rebuild cực nhanh
 - **Lint & Format**  
   - ESLint + (Prettier nếu thêm sau)
-
+- **Chế độ Light && Dark**  
+  - Người dùng có thể để chế dộ sáng và tối tùy theo sở thích
 ---
 
 ## 🛠️ Tech Stack
@@ -58,7 +59,7 @@
 
 ```bash
 # 1. Clone repo về máy
-git clone https://github.com/your-username/my-todo-app.git
+git clone https://github.com/AnhDuong2312/Test-intern
 cd my-todo-app
 
 # 2. Cài đặt dependencies
